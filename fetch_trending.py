@@ -17,8 +17,9 @@ CACHE_FILE = "cache.json"
 CSV_FILE = "products.csv"
 CACHE_EXPIRY = 24 * 60 * 60  # 24 hours in seconds
 
-# Retrieve Developer Token from environment variable
+# Retrieve Developer Tokens from environment variables
 ACCESS_TOKEN = os.getenv("ACCESS_TOKEN")
+SAASHUB_API_KEY = os.getenv("SAASHUB_API_KEY")
 
 # GraphQL queries
 TRENDING_QUERY = """
@@ -36,6 +37,7 @@ query FetchTrendingApps {
           nodes {
             id
             name
+            slug
           }
         }
       }
@@ -45,8 +47,8 @@ query FetchTrendingApps {
 """
 
 SIMILAR_QUERY = """
-query GetSimilar($topicIds: [ID!]) {
-  posts(topicIds: $topicIds, first: 5) {
+query GetSimilar($topic: String!) {
+  posts(topic: $topic, first: 5) {
     nodes {
       name
     }
@@ -102,26 +104,69 @@ def get_existing_product_names():
             print(f"Warning: Could not read existing CSV: {e}")
     return names
 
-def fetch_similar_products(topic_ids, current_name):
-    """Fetch similar products based on topics and exclude the current one."""
+def fetch_similar_saashub(product_name):
+    """Fetch alternatives from SaaSHub API."""
+    if not SAASHUB_API_KEY:
+        return None
+    
+    try:
+        # SaaSHub API endpoint for alternatives
+        url = f"https://www.saashub.com/api/alternatives/{product_name.lower().replace(' ', '-')}"
+        params = {"api_key": SAASHUB_API_KEY}
+        response = requests.get(url, params=params, timeout=10)
+        
+        if response.status_code == 200:
+            data = response.json()
+            alternatives = data.get("data", {}).get("alternatives", [])
+            names = [alt.get("attributes", {}).get("name") for alt in alternatives]
+            result = "; ".join([n for n in names if n][:3])
+            return result if result else None
+    except Exception:
+        pass
+    return None
+
+def fetch_similar_producthunt(topic_slugs, current_name):
+    """Fallback: Fetch similar products based on topics from Product Hunt V2."""
     headers = {
         "Accept": "application/json",
         "Content-Type": "application/json",
         "Authorization": f"Bearer {ACCESS_TOKEN}"
     }
-    try:
-        variables = {"topicIds": topic_ids}
-        response = requests.post(API_URL, json={"query": SIMILAR_QUERY, "variables": variables}, headers=headers)
-        response.raise_for_status()
-        data = response.json()
-        nodes = data.get("data", {}).get("posts", {}).get("nodes", [])
-        
-        # Extract names, filter out current product, and join with semicolons
-        similar_names = [n["name"] for n in nodes if n["name"] != current_name]
-        return "; ".join(similar_names[:3])
-    except Exception as e:
-        print(f"Warning: Failed to fetch similar products for {current_name}: {e}")
-        return ""
+    similar_names = set()
+    
+    for slug in topic_slugs[:2]:  # Try the first two topics
+        try:
+            variables = {"topic": slug}
+            response = requests.post(API_URL, json={"query": SIMILAR_QUERY, "variables": variables}, headers=headers)
+            response.raise_for_status()
+            data = response.json()
+            nodes = data.get("data", {}).get("posts", {}).get("nodes", [])
+            
+            for n in nodes:
+                if n["name"] != current_name:
+                    similar_names.add(n["name"])
+                if len(similar_names) >= 3:
+                    break
+        except Exception:
+            continue
+        if len(similar_names) >= 3:
+            break
+            
+    return "; ".join(list(similar_names)[:3])
+
+def fetch_similar_products(post):
+    """Try SaaSHub first, then Product Hunt topics as fallback."""
+    name = post["name"]
+    
+    # 1. Try SaaSHub if key is provided
+    if SAASHUB_API_KEY:
+        similar = fetch_similar_saashub(name)
+        if similar:
+            return similar
+            
+    # 2. Fallback to Product Hunt Topics (Fixed Query)
+    topic_slugs = [t["slug"] for t in post.get("topics", {}).get("nodes", [])]
+    return fetch_similar_producthunt(topic_slugs, name)
 
 def display_posts(posts):
     """Utility to print post information."""
@@ -145,8 +190,6 @@ def append_to_csv(new_posts):
     
     try:
         with open(CSV_FILE, mode='a', newline='', encoding='utf-8') as f:
-            # We use a custom writer or simple string formatting to ensure strict comma control
-            # But csv.writer with default settings works if we clean data first
             writer = csv.writer(f)
             
             if not file_exists:
@@ -156,9 +199,8 @@ def append_to_csv(new_posts):
                 name = clean_text(post["name"])
                 tagline = clean_text(post["tagline"])
                 
-                print(f"   Fetching similar products for: {post['name']}...")
-                topic_ids = [t["id"] for t in post.get("topics", {}).get("nodes", [])]
-                similar = clean_text(fetch_similar_products(topic_ids, post["name"]))
+                print(f"   Searching for similar products: {post['name']}...")
+                similar = clean_text(fetch_similar_products(post))
                 
                 writer.writerow([name, tagline, similar])
                 print(f"   ✅ Appended {post['name']} to {CSV_FILE}")
