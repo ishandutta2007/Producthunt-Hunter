@@ -37,7 +37,7 @@
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/yourusername/producthunt-hunter.git
+   git clone https://github.com/ishandutta2007/producthunt-hunter.git
    cd producthunt-hunter
    ```
 
@@ -100,7 +100,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ## 📧 Contact
 
-Project Link: [https://github.com/yourusername/producthunt-hunter](https://github.com/yourusername/producthunt-hunter)
+Project Link: [https://github.com/ishandutta2007/producthunt-hunter](https://github.com/ishandutta2007/producthunt-hunter)
 
 ---
 
