@@ -13,6 +13,7 @@
 - 🚀 **Real-time Discovery**: Fetch the top 20 trending apps instantly.
 - 📊 **Rich Metadata**: Get votes, taglines, topics, and direct links for every product.
 - 🔐 **Secure Configuration**: Uses `.env` for safe management of Developer Tokens.
+- ⚡ **Smart Caching**: Local file-based caching (24-hour expiry) to improve performance and respect API rate limits.
 - 🛠️ **Modern Stack**: Built with Python 3, GraphQL, and `python-dotenv`.
 
 ---
@@ -62,7 +63,7 @@
 Run the hunter script to fetch the latest trending products:
 
 ```bash
-python fetch.py
+python fetch_trending.py
 ```
 
 ### Example Output
