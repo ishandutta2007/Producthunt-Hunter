@@ -102,4 +102,20 @@ Distributed under the MIT License. See `LICENSE` for more information.
 Project Link: [https://github.com/yourusername/producthunt-hunter](https://github.com/yourusername/producthunt-hunter)
 
 ---
+
+
+## 📈 Star History
+
+<div align="center">
+   <a href="https://www.star-history.com/?repos=ishandutta2007%2FProducthunt-Hunter&type=date&legend=bottom-right">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=ishandutta2007/Producthunt-Hunter&type=date&theme=dark&legend=bottom-right" />
+      <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/chart?repos=ishandutta2007/Producthunt-Hunter&type=date&legend=bottom-right" />
+      <img alt="Star History Chart" src="https://api.star-history.com/chart?repos=ishandutta2007/Producthunt-Hunter&type=date&legend=bottom-right" />
+    </picture>
+   </a>
+</div>
+
+---
+
 *Developed with ❤️ for the maker community.*
