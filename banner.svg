@@ -5,7 +5,7 @@
   <circle cx="100" cy="50" r="30" fill="white" opacity="0.1"/>
   
   <text x="400" y="100" font-family="Arial, sans-serif" font-size="48" font-weight="bold" fill="white" text-anchor="middle">PRODUCTHUNT HUNTER</text>
-  <text x="400" y="140" font-family="Arial, sans-serif" font-size="18" fill="white" text-anchor="middle" opacity="0.9">🏹 Track, Discover & Analyze Trending Products Automagically</text>
+  <text x="400" y="140" font-family="Arial, sans-serif" font-size="18" fill="white" text-anchor="middle" opacity="0.9">Track, Discover &amp; Analyze Trending Products Automagically</text>
   
   <path d="M40 160L60 180L40 200" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" opacity="0.5"/>
   <path d="M760 160L740 180L760 200" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" opacity="0.5"/>

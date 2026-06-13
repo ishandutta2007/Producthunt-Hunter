@@ -1,12 +1,12 @@
-<p align="center">
-  <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODAwIiBoZWlnaHQ9IjIwMCIgdmlld0JveD0iMCAwIDgwMCAyMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgPHJlY3Qgd2lkdGg9IjgwMCIgaGVpZ2h0PSIyMDAiIHJ4PSIxMCIgZmlsbD0iI0RBNTUyRiIvPgogIDxwYXRoIGQ9Ik00MDAgNDBMNDIwIDgwSDM4MEw0MDAgNDBaIiBmaWxsPSJ3aGl0ZSIgb3BhY2l0eT0iMC4zIi8+CiAgPGNpcmNsZSBjeD0iNzAwIiBjeT0iMTUwIiByPSI1MCIgZmlsbD0id2hpdGUiIG9wYWNpdHk9IjAuMSIvPgogIDxjaXJjbGUgY3g9IjEwMCIgY3k9IjUwIiByPSIzMCIgZmlsbD0id2hpdGUiIG9wYWNpdHk9IjAuMSIvPgogIAogIDx0ZXh0IHg9IjQwMCIgeT0iMTAwIiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iNDgiIGZvbnQtd2VpZ2h0PSJib2xkIiBmaWxsPSJ3aGl0ZSIgdGV4dC1hbmNob3I9Im1pZGRsZSI+UFJPRFVDVEhVTlQgSFVOVEVSPC90ZXh0PgogIDx0ZXh0IHg9IjQwMCIgeT0iMTQwIiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTgiIGZpbGw9IndoaXRlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBvcGFjaXR5PSIwLjkiPvCfj7kgVHJhY2ssIERpc2NvdmVyICYgQW5hbHl6ZSBUcmVuZGluZyBQcm9kdWN0cyBBdXRvbWFnaWNhbGx5PC90ZXh0PgogIAogIDxwYXRoIGQ9Ik00MCAxNjBMNjAgMTgwTDQwIDIwMCIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSI0IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIG9wYWNpdHk9IjAuNSIvPgogIDxwYXRoIGQ9Ik03NjAgMTYMEw3NDAgMTgwTDc2MCAyMDAiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iNCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBvcGFjaXR5PSIwLjUiLz4KPC9zdmc+" alt="ProductHunt Hunter Banner" width="800">
-</p>
+<div align="center">
+  <img src="./banner.svg" alt="ProductHunt Hunter Banner" width="800">
+</div>
 
+# ProductHunt Hunter 🏹
 
-<p align="center">
-   # ProductHunt Hunter 🏹
+<div align="center">
   <strong>The ultimate tool to track, discover, and analyze trending products on Product Hunt.</strong>
-</p>
+</div>
 
 <p align="center">
   <a href="https://www.python.org/"><img src="https://img.shields.io/badge/python-3.8%2B-blue.svg" alt="Python Version"></a>
@@ -16,7 +16,6 @@
   <a href="https://github.com/ishandutta2007">
     <img alt="GitHub followers" src="https://img.shields.io/github/followers/ishandutta2007?label=Follow&style=for-the-badge&logo=github&logoColor=white"/>
   </a>
-
 </p>
 
 ---
