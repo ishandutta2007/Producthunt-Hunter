@@ -1,0 +1,12 @@
+<svg width="800" height="200" viewBox="0 0 800 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="200" rx="10" fill="#DA552F"/>
+  <path d="M400 40L420 80H380L400 40Z" fill="white" opacity="0.3"/>
+  <circle cx="700" cy="150" r="50" fill="white" opacity="0.1"/>
+  <circle cx="100" cy="50" r="30" fill="white" opacity="0.1"/>
+  
+  <text x="400" y="100" font-family="Arial, sans-serif" font-size="48" font-weight="bold" fill="white" text-anchor="middle">PRODUCTHUNT HUNTER</text>
+  <text x="400" y="140" font-family="Arial, sans-serif" font-size="18" fill="white" text-anchor="middle" opacity="0.9">🏹 Track, Discover & Analyze Trending Products Automagically</text>
+  
+  <path d="M40 160L60 180L40 200" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" opacity="0.5"/>
+  <path d="M760 160L740 180L760 200" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" opacity="0.5"/>
+</svg>

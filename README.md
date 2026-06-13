@@ -1,91 +1,124 @@
-# ProductHunt Hunter 🏹
+<div align="center">
+  <img src="banner.svg" alt="ProductHunt Hunter Banner" width="800">
 
-[![Python Version](https://img.shields.io/badge/python-3.8%2B-blue.svg)](https://www.python.org/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Product Hunt API](https://img.shields.io/badge/API-Product%20Hunt%20V2-orange.svg)](https://api.producthunt.com/v2/docs)
-<a href="https://github.com/ishandutta2007">
-  <img alt="GitHub followers" src="https://img.shields.io/github/followers/ishandutta2007?label=Follow&style=for-the-badge&logo=github&logoColor=white" alt="Github"/>
-</a>
+  # ProductHunt Hunter 🏹
+  
+  **The ultimate tool to track, discover, and analyze trending products on Product Hunt.**
 
-**ProductHunt Hunter** is a lightweight, efficient Python utility designed to track and discover the top-voted products on Product Hunt. Leveraging the **Product Hunt API V2 (GraphQL)**, it provides real-time insights into what's trending in the tech ecosystem.
+  [![Python Version](https://img.shields.io/badge/python-3.8%2B-blue.svg)](https://www.python.org/)
+  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+  [![Product Hunt API](https://img.shields.io/badge/API-Product%20Hunt%20V2-orange.svg)](https://api.producthunt.com/v2/docs)
+  [![GraphQL](https://img.shields.io/badge/Query-GraphQL-e10098.svg)](https://graphql.org/)
+  [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/ishandutta2007/producthunt-hunter/graphs/commit-activity)
+  <a href="https://github.com/ishandutta2007">
+    <img alt="GitHub followers" src="https://img.shields.io/github/followers/ishandutta2007?label=Follow&style=for-the-badge&logo=github&logoColor=white"/>
+  </a>
+</div>
 
 ---
 
-## ✨ Features
+## 🌟 Overview
 
-- 🚀 **Real-time Discovery**: Fetch the top 20 trending apps instantly.
-- 📊 **Rich Metadata**: Get votes, taglines, topics, and direct links for every product.
-- 🔐 **Secure Configuration**: Uses `.env` for safe management of Developer Tokens.
-- ⚡ **Smart Caching**: Local file-based caching (24-hour expiry) to improve performance and respect API rate limits.
-- 🛠️ **Modern Stack**: Built with Python 3, GraphQL, and `python-dotenv`.
+**ProductHunt Hunter** is a powerful Python-based automation tool designed for makers, marketers, and researchers. It seamlessly interfaces with the **Product Hunt API V2** via **GraphQL** to fetch real-time trending data, analyze product topics, and find similar alternatives using **SaaSHub**.
+
+Whether you're doing market research, looking for inspiration, or tracking competitors, ProductHunt Hunter automates the discovery process and stores it all in an easy-to-use CSV format.
+
+---
+
+## ✨ Key Features
+
+- 🚀 **Real-time Trending Discovery**: Automatically fetch the top 20 trending products.
+- 🔍 **Deep Insights**: Extract votes, taglines, detailed topics, and direct links.
+- 🤖 **Smart Competitor Analysis**: Automatically finds similar products using SaaSHub and PH Topics.
+- 💾 **Automated Data Export**: Saves new discoveries to `products.csv` for easy analysis in Excel/Sheets.
+- ⚡ **Performance Optimized**: Local file-based caching (24h) to respect API rate limits and speed up repeated runs.
+- 🔐 **Secure by Design**: Fully configurable via `.env` variables.
 
 ---
 
 ## 🛠️ Tech Stack
 
-- **Language:** Python 3.8+
-- **API:** Product Hunt V2 (GraphQL)
-- **Libraries:** `requests`, `python-dotenv`
+- **Core:** ![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white) 3.8+
+- **API Architecture:** ![GraphQL](https://img.shields.io/badge/GraphQL-E10098?style=flat-square&logo=graphql&logoColor=white)
+- **Data Source:** ![Product Hunt](https://img.shields.io/badge/Product%20Hunt-DA552F?style=flat-square&logo=product-hunt&logoColor=white)
+- **Intelligence:** ![SaaSHub](https://img.shields.io/badge/SaaSHub-Blue?style=flat-square) (Optional)
 
 ---
 
 ## 🚀 Getting Started
 
-### Prerequisites
+### 📋 Prerequisites
 
-- A [Product Hunt Developer Token](https://www.producthunt.com/v2/developer)
-- Python 3.8 or higher installed
+- [Product Hunt Developer Token](https://www.producthunt.com/v2/developer)
+- Python 3.8+ installed on your system.
 
-### Installation
+### ⚙️ Installation
 
-1. **Clone the repository:**
+1. **Clone the repo:**
    ```bash
    git clone https://github.com/ishandutta2007/producthunt-hunter.git
    cd producthunt-hunter
    ```
 
-2. **Install dependencies:**
+2. **Install requirements:**
    ```bash
-   pip install requests python-dotenv
+   pip install -r requirements.txt
+   # Or manually: pip install requests python-dotenv
    ```
 
-3. **Configure Environment Variables:**
-   Duplicate the example environment file and add your credentials:
+3. **Setup Environment:**
    ```bash
    cp .env.example .env
    ```
-   Edit `.env` and insert your `ACCESS_TOKEN`:
+   Edit `.env` and add your credentials:
    ```env
-   ACCESS_TOKEN=your_actual_token_here
+   ACCESS_TOKEN=your_ph_token_here
+   SAASHUB_API_KEY=your_saashub_key_here (optional)
    ```
 
 ---
 
 ## 📖 Usage
 
-Run the hunter script to fetch the latest trending products:
+Run the hunter with a single command:
 
 ```bash
 python fetch_trending.py
 ```
 
-### Example Output
+### 📸 Demo / Example Output
+
+*(Imagine a cool GIF of the CLI running here!)*
+<div align="center">
+  <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExOHIzZ3Z5Z3Z5Z3Z5Z3Z5Z3Z5Z3Z5Z3Z5Z3Z5Z3Z5Z3Z/l41lTfNfR6Z0BfO08/giphy.gif" alt="Searching GIF" width="400">
+</div>
 
 ```text
---- Top 20 Trending Apps on Product Hunt ---
+--- Fetching fresh data from Product Hunt API ---
 
-1. Fundraisly (▲ 1093 votes)
-   Tagline: AI fundraising agent that finds investors and books meetings
-   Topics:  Venture Capital, Artificial Intelligence, Fundraising
-   Link:    https://www.producthunt.com/products/fundraisly
+1. AI Coder (▲ 1250 votes)
+   Tagline: Build apps with natural language
+   Topics:  AI, Developer Tools, Software
+   Link:    https://www.producthunt.com/products/ai-coder
+   Searching for similar products...
+   ✅ Appended AI Coder to products.csv
 --------------------------------------------------
 ```
 
 ---
 
+## 🗺️ Roadmap
+
+- [ ] Support for fetching top products by specific topics.
+- [ ] Email notifications for new trending apps.
+- [ ] Weekly summary report generation (PDF/HTML).
+- [ ] Integration with Slack/Discord webhooks.
+
+---
+
 ## 🤝 Contributing
 
-Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+We love contributions! Whether it's a bug report, a feature request, or a pull request, you are welcome to help make **ProductHunt Hunter** better.
 
 1. Fork the Project
 2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
@@ -101,12 +134,13 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ---
 
-## 📧 Contact
+## 📬 Contact & Support
+
+**Ishan Dutta** - [GitHub](https://github.com/ishandutta2007)
 
 Project Link: [https://github.com/ishandutta2007/producthunt-hunter](https://github.com/ishandutta2007/producthunt-hunter)
 
 ---
-
 
 ## 📈 Star History
 
@@ -120,6 +154,6 @@ Project Link: [https://github.com/ishandutta2007/producthunt-hunter](https://git
    </a>
 </div>
 
----
-
-*Developed with ❤️ for the maker community.*
+<div align="center">
+  <sub>Developed with ❤️ for the maker community.</sub>
+</div>
