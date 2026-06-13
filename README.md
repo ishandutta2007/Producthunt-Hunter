@@ -3,6 +3,9 @@
 [![Python Version](https://img.shields.io/badge/python-3.8%2B-blue.svg)](https://www.python.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Product Hunt API](https://img.shields.io/badge/API-Product%20Hunt%20V2-orange.svg)](https://api.producthunt.com/v2/docs)
+<a href="https://github.com/ishandutta2007">
+  <img alt="GitHub followers" src="https://img.shields.io/github/followers/ishandutta2007?label=Follow&style=for-the-badge&logo=github&logoColor=white" alt="Github"/>
+</a>
 
 **ProductHunt Hunter** is a lightweight, efficient Python utility designed to track and discover the top-voted products on Product Hunt. Leveraging the **Product Hunt API V2 (GraphQL)**, it provides real-time insights into what's trending in the tech ecosystem.
 
