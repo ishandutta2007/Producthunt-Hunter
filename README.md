@@ -1,11 +1,9 @@
 <div align="center">
   <img src="./banner.svg" alt="ProductHunt Hunter Banner" width="800">
-</div>
 
-# ProductHunt Hunter 🏹
+  # ProductHunt Hunter 🏹
 
-<div align="center">
-  <strong>The ultimate tool to track, discover, and analyze trending products on Product Hunt.</strong>
+  **The ultimate tool to track, discover, and analyze trending products on Product Hunt.**
 </div>
 
 <p align="center">
