@@ -170,3 +170,12 @@ Project Link: [https://github.com/ishandutta2007/producthunt-hunter](https://git
 <div align="center">
   <sub>Developed with ❤️ for the maker community.</sub>
 </div>
+
+## ⭐ Star History
+
+<a href="https://star-history.com/#ishandutta2007/Producthunt-Hunter&Timeline" align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/ishandutta2007_Producthunt-Hunter_growth.svg">
+    <img alt="Star History Chart" src="assets/ishandutta2007_Producthunt-Hunter_growth.svg">
+  </picture>
+</a>
