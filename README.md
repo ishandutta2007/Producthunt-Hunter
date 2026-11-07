@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="./banner.svg" alt="ProductHunt Hunter Banner" width="800">
+  <img src="assets/banner.svg" alt="ProductHunt Hunter Banner" width="800">
 
   # ProductHunt Hunter 🏹
 
