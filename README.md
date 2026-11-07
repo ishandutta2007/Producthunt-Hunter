@@ -12,9 +12,7 @@
   <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License: MIT"></a>
   <a href="https://api.producthunt.com/v2/docs"><img src="https://img.shields.io/badge/API-Product%20Hunt%20V2-orange.svg" alt="Product Hunt API"></a>
   <a href="https://graphql.org/"><img src="https://img.shields.io/badge/Query-GraphQL-e10098.svg" alt="GraphQL"></a>
-  <a href="https://github.com/ishandutta2007">
-    <img alt="GitHub followers" src="https://img.shields.io/github/followers/ishandutta2007?label=Follow&style=for-the-badge&logo=github&logoColor=white"/>
-  </a>
+  <a href="https://github.com/ishandutta2007"><img alt="GitHub followers" src="https://img.shields.io/github/followers/ishandutta2007?label=Follow" /></a>
 </p>
 
 ---
@@ -136,7 +134,20 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ---
 
-## 📬 Contact & Support
+## 💖 Support
+
+Thank you for checking out **ProductHunt Hunter**! If you find this project useful, please consider:
+- ⭐ **Starring** the repository
+- 🍴 **Forking** it to add your own features
+- 📢 **Sharing** it with fellow makers and developers
+
+If you'd like to support the ongoing maintenance and development of this project:
+
+[![Buy Me A Coffee / Sponsor](https://img.shields.io/badge/Sponsor-%E2%9D%A4-ea4aaa?style=for-the-badge&logo=github-sponsors)](https://github.com/sponsors/ishandutta2007)
+
+---
+
+## 📬 Contact
 
 **Ishan Dutta** - [GitHub](https://github.com/ishandutta2007)
 
